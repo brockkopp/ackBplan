@@ -1,0 +1,56 @@
+\documentclass[letterpaper, 11pt, titlepage]{article}
+
+% The geometry package allows for easy page formatting.
+\usepackage{geometry}
+\geometry{letterpaper}
+
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+\setcounter{secnumdepth}{-1} 
+
+%% Paragraph Formatting
+\setlength\parindent{10pt}				% No indent
+\setlength{\parskip}{2mm}
+
+%% References
+\usepackage[hidelinks]{hyperref}
+\usepackage[american]{babel} 
+\usepackage{csquotes} 
+
+% Package for formatting URLs.
+\usepackage{url}
+
+% Packages and definitions for graphics files.
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%
+% Set the title, author, and date.
+\title{Acknowledgements}
+\author{Brock Kopp, Karl Price}
+\date{\today}
+
+%
+% The document proper.
+%
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\input{./sections/ack1_exec.tex}
+\input{./sections/ack2_problem.tex}
+\input{./sections/ack3_solution.tex}
+\input{./sections/ack4_model.tex}
+\input{./sections/ack5_product.tex}
+\input{./sections/ack6_marketing.tex}
+\input{./sections/ack7_environment.tex}
+\input{./sections/ack8_team.tex}
+\input{./sections/ack9_finances.tex}
+\input{./sections/ack10_current.tex}
+\input{./sections/ack11_risk.tex}
+
+
+\end{document}
