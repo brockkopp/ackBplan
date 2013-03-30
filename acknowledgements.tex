@@ -4,15 +4,12 @@
 \usepackage{geometry}
 \geometry{letterpaper}
 
-% \usepackage{wallpaper}
-% \ULCornerWallPaper{1}{ackLetterhead.pdf}
-
 \usepackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
 \setcounter{secnumdepth}{-1} 
 
 %% Paragraph Formatting
-\setlength\parindent{10pt}				% No indent
+\setlength\parindent{0pt}				% No indent
 \setlength{\parskip}{2mm}
 
 %% Prevent hyphenating Acknowlegements
@@ -31,6 +28,14 @@
 \usepackage{epstopdf}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
+% Fonts
+\usepackage[protrusion=true,expansion=true]{microtype}
+% \usepackage{minion}
+
+\usepackage{pdfpages}
+\usepackage{wallpaper}
+\ULCornerWallPaper{1}{ackLetterhead.pdf}
+
 %
 % Set the title, author, and date.
 \title{Acknowledgements}
@@ -42,7 +47,8 @@
 %
 \begin{document}
 
-\maketitle
+
+\includepdf[pages={1}]{Title.pdf}	% \maketitle
 
 \tableofcontents
 
