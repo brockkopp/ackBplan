@@ -51,16 +51,15 @@
 
 \includepdf[pages={1}]{./specialPages/ackTitle.pdf}	% \maketitle
 
-\tableofcontents
+\tableofcontents \newpage
 
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\automark{section}
+\ohead[\headmark]{\headmark}
+\cfoot[\pagemark]{\pagemark}
 
-	\pagestyle{scrheadings}
-	\clearscrheadfoot
-	\automark{section}
-	\ohead[\headmark]{\headmark}
-	\cfoot[\pagemark]{\pagemark}
-
-\input{./sections/ack1_exec.tex}
+\input{./sections/ack1_exec.tex} \newpage
 \input{./sections/ack2_problem.tex}
 \input{./sections/ack3_solution.tex}
 \input{./sections/ack4_model.tex}
@@ -69,8 +68,10 @@
 \input{./sections/ack7_environment.tex}
 \input{./sections/ack8_team.tex}
 \input{./sections/ack9_finances.tex}
+\input{./sections/ack10_current.tex}
 \input{./sections/ack11_risk.tex}
 
+\newpage
 \section{Appendix}
 {\bf Contents:}
 \begin{itemize}
