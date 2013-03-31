@@ -2,11 +2,11 @@
 
 % The geometry package allows for easy page formatting.
 \usepackage{geometry}
-\geometry{letterpaper}
+	\geometry{letterpaper}
 
 \usepackage{titlesec}
-\newcommand{\sectionbreak}{\clearpage}
-\setcounter{secnumdepth}{-1} 
+	\newcommand{\sectionbreak}{\clearpage}
+	\setcounter{secnumdepth}{-1} 
 
 %% Paragraph Formatting
 \setlength\parindent{0pt}				% No indent
@@ -26,7 +26,7 @@
 % Packages and definitions for graphics files.
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+	\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 % Fonts
 \usepackage[protrusion=true,expansion=true]{microtype}
@@ -34,7 +34,8 @@
 
 \usepackage{pdfpages}
 \usepackage{wallpaper}
-\ULCornerWallPaper{1}{./specialPages/ackLetterhead.pdf}
+	\ULCornerWallPaper{1}{./specialPages/ackLetterhead.pdf}
+\usepackage{scrpage2}
 
 %
 % Set the title, author, and date.
@@ -51,6 +52,13 @@
 \includepdf[pages={1}]{./specialPages/ackTitle.pdf}	% \maketitle
 
 \tableofcontents
+
+
+	\pagestyle{scrheadings}
+	\clearscrheadfoot
+	\automark{section}
+	\ohead[\headmark]{\headmark}
+	\cfoot[\pagemark]{\pagemark}
 
 \input{./sections/ack1_exec.tex}
 \input{./sections/ack2_problem.tex}
